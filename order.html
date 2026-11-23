@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food - Foodie</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .order-header{
+            background:#fff5ef;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        .order-header h1{
+            color:#ff5722;
+            font-size:42px;
+            margin-bottom:10px;
+        }
+
+        .order-header p{
+            color:#666;
+        }
+
+        .order-section{
+            padding:70px 8%;
+            background:#fafafa;
+            display:flex;
+            justify-content:center;
+        }
+
+        .order-form{
+            width:700px;
+            background:white;
+            padding:35px;
+            border-radius:12px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .order-form h2{
+            text-align:center;
+            color:#ff5722;
+            margin-bottom:25px;
+        }
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+        .form-group label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:bold;
+            color:#333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+            width:100%;
+            padding:12px;
+            border:1px solid #ddd;
+            border-radius:6px;
+            font-size:15px;
+        }
+
+        textarea{
+            resize:none;
+            height:100px;
+        }
+
+        .row{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        .price-box{
+            background:#fff5ef;
+            padding:20px;
+            border-radius:10px;
+            margin:20px 0;
+            text-align:center;
+        }
+
+        .price-box h3{
+            color:#ff5722;
+        }
+
+        .place-order{
+            width:100%;
+            padding:14px;
+            border:none;
+            background:#ff5722;
+            color:white;
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        .place-order:hover{
+            background:#e64a19;
+        }
+
+        @media(max-width:700px){
+
+            .row{
+                grid-template-columns:1fr;
+            }
+
+            .order-form{
+                width:100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">🍔 Foodie</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Header -->
+
+    <section class="order-header">
+
+        <h1>Place Your Order</h1>
+
+        <p>Fill the details and order your favourite food.</p>
+
+    </section>
+
+
+    <!-- Order Form -->
+
+    <section class="order-section">
+
+        <div class="order-form">
+
+            <h2>Order Details</h2>
+
+            <form>
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label>Customer Name</label>
+
+                    <input type="text"
+                           placeholder="Enter your name"
+                           required>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label>Mobile Number</label>
+
+                    <input type="tel"
+                           placeholder="Enter mobile number"
+                           required>
+
+                </div>
+
+
+                <!-- Food + Quantity -->
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Select Food</label>
+
+                        <select required>
+
+                            <option>Select Item</option>
+
+                            <option>Cheese Pizza</option>
+                            <option>Farmhouse Pizza</option>
+                            <option>Paneer Pizza</option>
+
+                            <option>Classic Burger</option>
+                            <option>Cheese Burger</option>
+
+                            <option>Chicken Biryani</option>
+                            <option>Veg Biryani</option>
+
+                            <option>Cold Coffee</option>
+                            <option>Chocolate Cake</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Quantity</label>
+
+                        <input type="number"
+                               min="1"
+                               value="1">
+
+                    </div>
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="form-group">
+
+                    <label>Delivery Address</label>
+
+                    <textarea
+                        placeholder="Enter your complete address"
+                        required></textarea>
+
+                </div>
+
+
+                <!-- Payment -->
+
+                <div class="form-group">
+
+                    <label>Payment Method</label>
+
+                    <select>
+
+                        <option>Cash on Delivery</option>
+                        <option>UPI</option>
+                        <option>Debit Card</option>
+                        <option>Credit Card</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Price Box -->
+
+                <div class="price-box">
+
+                    <h3>Total Amount</h3>
+
+                    <h2>₹249</h2>
+
+                    <p>
+                        (JavaScript add karne par automatic calculate hoga)
+                    </p>
+
+                </div>
+
+
+                <!-- Button -->
+
+                <button class="place-order">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>© 2026 Foodie. All Rights Reserved.</p>
+
+        <p>Fast Delivery | Fresh Food | Best Offers</p>
+
+    </footer>
+
+</body>
+</html>

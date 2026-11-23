@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu - Foodie</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Menu Header */
+        .menu-header {
+            text-align: center;
+            padding: 70px 20px;
+            background: #fff5ef;
+        }
+
+        .menu-header h1 {
+            font-size: 45px;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .menu-header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Category Navigation */
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 30px 20px;
+            background: white;
+        }
+
+        .menu-categories a {
+            padding: 10px 20px;
+            border: 2px solid #ff5722;
+            border-radius: 25px;
+            color: #ff5722;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu-categories a:hover {
+            background: #ff5722;
+            color: white;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 60px 8%;
+            background: #fafafa;
+        }
+
+        .menu-section:nth-child(even) {
+            background: white;
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #222;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Menu Card */
+        .menu-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .menu-info {
+            padding: 20px;
+        }
+
+        .menu-info h3 {
+            font-size: 21px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .menu-info p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .menu-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .order-btn {
+            background: #ff5722;
+            color: white;
+            padding: 9px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #e64a19;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-header h1 {
+                font-size: 35px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🍔 Foodie
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+
+        <h1>Our Delicious Menu</h1>
+
+        <p>
+            Choose your favourite food and enjoy
+            delicious meals at your doorstep.
+        </p>
+
+    </section>
+
+
+    <!-- Category Navigation -->
+    <div class="menu-categories">
+
+        <a href="#pizza">🍕 Pizza</a>
+        <a href="#burger">🍔 Burger</a>
+        <a href="#biryani">🍛 Biryani</a>
+        <a href="#chinese">🍜 Chinese</a>
+        <a href="#drinks">🥤 Drinks</a>
+        <a href="#dessert">🍰 Desserts</a>
+
+    </div>
+
+
+    <!-- ================= PIZZA ================= -->
+
+    <section class="menu-section" id="pizza">
+
+        <h2>🍕 Pizza</h2>
+
+        <div class="menu-grid">
+
+            <!-- Pizza 1 -->
+            <div class="menu-card">
+
+                <img src="images/pizza.jpg"
+                     alt="Cheese Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Cheese Pizza</h3>
+
+                    <p>
+                        Delicious pizza loaded with
+                        melted cheese and fresh toppings.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹249
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 2 -->
+            <div class="menu-card">
+
+                <img src="images/pizza.jpg"
+                     alt="Farmhouse Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Farmhouse Pizza</h3>
+
+                    <p>
+                        Fresh vegetables with cheese
+                        on a crispy pizza base.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹299
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 3 -->
+            <div class="menu-card">
+
+                <img src="images/pizza.jpg"
+                     alt="Paneer Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Paneer Pizza</h3>
+
+                    <p>
+                        Soft paneer, cheese and tasty
+                        spices on a delicious pizza.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹279
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BURGER ================= -->
+
+    <section class="menu-section" id="burger">
+
+        <h2>🍔 Burgers</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="images/burger.jpg"
+                     alt="Classic Burger">
+
+                <div class="menu-info">
+
+                    <h3>Classic Burger</h3>
+
+                    <p>
+                        Juicy patty with fresh vegetables
+                        and tasty sauce.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹149
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/burger1.jpg"
+                     alt="Cheese Burger">
+
+                <div class="menu-info">
+
+                    <h3>Cheese Burger</h3>
+
+                    <p>
+                        Juicy burger with extra cheese
+                        and delicious sauce.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹179
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/burger2.jpg"
+                     alt="Veggie Burger">
+
+                <div class="menu-info">
+
+                    <h3>Veggie Burger</h3>
+
+                    <p>
+                        Crispy vegetable patty with
+                        fresh lettuce and sauce.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹129
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BIRYANI ================= -->
+
+    <section class="menu-section" id="biryani">
+
+        <h2>🍛 Biryani</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="images/biryani.jpg"
+                     alt="Chicken Biryani">
+
+                <div class="menu-info">
+
+                    <h3>Chicken Biryani</h3>
+
+                    <p>
+                        Aromatic basmati rice cooked
+                        with spicy chicken.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹199
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/biryani paner.jpg"
+                     alt="Veg Biryani">
+
+                <div class="menu-info">
+
+                    <h3>Veg Biryani</h3>
+
+                    <p>
+                        Flavourful rice cooked with
+                        fresh vegetables and spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹159
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/biryani veg.jpg"
+                     alt="Paneer Biryani">
+
+                <div class="menu-info">
+
+                    <h3>Paneer Biryani</h3>
+
+                    <p>
+                        Delicious paneer with aromatic
+                        rice and special spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹189
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CHINESE ================= -->
+
+    <section class="menu-section" id="chinese">
+
+        <h2>🍜 Chinese</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="images/noodle 1.jpg"
+                     alt="Veg Noodles">
+
+                <div class="menu-info">
+
+                    <h3>Veg Noodles</h3>
+
+                    <p>
+                        Stir-fried noodles with fresh
+                        vegetables and sauces.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹139
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/noodle 2.jpg"
+                     alt="Hakka Noodles">
+
+                <div class="menu-info">
+
+                    <h3>Hakka Noodles</h3>
+
+                    <p>
+                        Spicy and tasty Hakka noodles
+                        with fresh vegetables.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹159
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/manchuriyan.jpg"
+                     alt="Veg Manchurian">
+
+                <div class="menu-info">
+
+                    <h3>Veg Manchurian</h3>
+
+                    <p>
+                        Crispy vegetable balls tossed
+                        in delicious Manchurian sauce.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹169
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DRINKS ================= -->
+
+    <section class="menu-section" id="drinks">
+
+        <h2>🥤 Drinks</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="images/cold drink.jpg"
+                     alt="Cold Drink">
+
+                <div class="menu-info">
+
+                    <h3>Cold Drink</h3>
+
+                    <p>
+                        Chilled and refreshing cold drink
+                        to enjoy with your meal.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹60
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/lemon drink.jpg"
+                     alt="Fresh Lime">
+
+                <div class="menu-info">
+
+                    <h3>Fresh Lime</h3>
+
+                    <p>
+                        Fresh and refreshing lime drink
+                        with a perfect taste.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹80
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/cold coffee.jpg"
+                     alt="Cold Coffee">
+
+                <div class="menu-info">
+
+                    <h3>Cold Coffee</h3>
+
+                    <p>
+                        Creamy and chilled coffee
+                        for coffee lovers.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹120
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DESSERT ================= -->
+
+    <section class="menu-section" id="dessert">
+
+        <h2>🍰 Desserts</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="images/chocolate cake.jpg"
+                     alt="Chocolate Cake">
+
+                <div class="menu-info">
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>
+                        Soft and delicious chocolate cake
+                        for dessert lovers.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹129
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/ice cream.jpg"
+                     alt="Ice Cream">
+
+                <div class="menu-info">
+
+                    <h3>Ice Cream</h3>
+
+                    <p>
+                        Creamy and delicious ice cream
+                        with a smooth texture.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹99
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img src="images/donut.jpg"
+                     alt="Chocolate Donut">
+
+                <div class="menu-info">
+
+                    <h3>Chocolate Donut</h3>
+
+                    <p>
+                        Soft donut covered with
+                        delicious chocolate.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="menu-price">
+                            ₹89
+                        </span>
+
+                        <a href="order.html"
+                           class="order-btn">
+                            Order
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Foodie. All Rights Reserved.
+        </p>
+
+        <p>
+            Delicious Food | Fast Delivery | Best Offers
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

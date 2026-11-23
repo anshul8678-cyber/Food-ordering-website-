@@ -1,0 +1,404 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Offers - Foodie</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Offers Page */
+
+        .offers-header {
+            background: #fff5ef;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .offers-header h1 {
+            font-size: 40px;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .offers-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .offers-section {
+            padding: 60px 7%;
+            background: #fff;
+        }
+
+        .offers-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .offer-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .offer-card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .offer-card h3 {
+            color: #ff5722;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .offer-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .coupon {
+            display: inline-block;
+            background: #fff5ef;
+            color: #ff5722;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .offer-btn {
+            display: inline-block;
+            background: #ff5722;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .offer-btn:hover {
+            background: #e64a19;
+        }
+
+        .offer-cta {
+            margin-top: 50px;
+            background: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            border-radius: 15px;
+        }
+
+        .offer-cta h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .offer-cta p {
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #ff5722;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .terms {
+            text-align: center;
+            margin-top: 35px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .offers-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .offers-container {
+                grid-template-columns: 1fr;
+            }
+
+            .offers-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍔 Foodie
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Page Header -->
+
+    <section class="offers-header">
+
+        <h1>Special Offers 🎉</h1>
+
+        <p>
+            Grab amazing deals and enjoy your favourite food at the best prices.
+        </p>
+
+    </section>
+
+
+    <!-- Offers -->
+
+    <section class="offers-section">
+
+        <div class="offers-container">
+
+            <!-- Offer 1 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🎁</div>
+
+                <h2>First Order Offer</h2>
+
+                <h3>20% OFF</h3>
+
+                <p>
+                    Get 20% discount on your first food order.
+                </p>
+
+                <div class="coupon">
+                    FOOD20
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Offer 2 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🍕</div>
+
+                <h2>Pizza Combo</h2>
+
+                <h3>₹100 OFF</h3>
+
+                <p>
+                    Enjoy delicious pizza and save ₹100 on your order.
+                </p>
+
+                <div class="coupon">
+                    PIZZA100
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Offer 3 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🍔</div>
+
+                <h2>Burger Deal</h2>
+
+                <h3>15% OFF</h3>
+
+                <p>
+                    Get 15% discount on selected burger items.
+                </p>
+
+                <div class="coupon">
+                    BURGER15
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Offer 4 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🍛</div>
+
+                <h2>Biryani Special</h2>
+
+                <h3>10% OFF</h3>
+
+                <p>
+                    Enjoy delicious biryani with an exciting discount.
+                </p>
+
+                <div class="coupon">
+                    BIRYANI10
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Offer 5 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🚚</div>
+
+                <h2>Free Delivery</h2>
+
+                <h3>FREE</h3>
+
+                <p>
+                    Enjoy free delivery on selected orders.
+                </p>
+
+                <div class="coupon">
+                    FREEDEL
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Offer 6 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">👨‍👩‍👧‍👦</div>
+
+                <h2>Family Combo</h2>
+
+                <h3>₹150 OFF</h3>
+
+                <p>
+                    Order a family meal and save ₹150.
+                </p>
+
+                <div class="coupon">
+                    FAMILY150
+                </div>
+
+                <br>
+
+                <a href="order.html" class="offer-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="offer-cta">
+
+            <h2>Hungry for More? 😋</h2>
+
+            <p>
+                Explore our complete menu and choose your favourite food.
+            </p>
+
+            <a href="menu.html" class="cta-btn">
+                Explore Menu
+            </a>
+
+        </div>
+
+
+        <!-- Terms -->
+
+        <div class="terms">
+
+            <p>
+                *Terms and conditions apply. Offers may vary depending on the order.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>© 2026 Foodie. All Rights Reserved.</p>
+
+        <p>Delicious Food | Fast Delivery | Best Offers</p>
+
+    </footer>
+
+</body>
+</html>
